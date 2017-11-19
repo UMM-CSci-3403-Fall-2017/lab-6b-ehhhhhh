@@ -1,3 +1,5 @@
+import java.net.*;
+
 package xrate;
 
 /**
@@ -19,7 +21,7 @@ public class ExchangeRateReader {
      *            the base URL for requests
      */
     public ExchangeRateReader(String baseURL) {
-        // TODO Your code here
+	URL url = new URL(baseURL);
     }
 
     /**
@@ -40,7 +42,7 @@ public class ExchangeRateReader {
      * @throws SAXException
      */
     public float getExchangeRate(String currencyCode, int year, int month, int day) {
-        // TODO Your code here
+       InputStream xmlStream = url.openStream(); 
         throw new UnsupportedOperationException();
     }
 
